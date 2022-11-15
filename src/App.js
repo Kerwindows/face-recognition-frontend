@@ -36,7 +36,7 @@ const App = () => {
   };
   //added to check if server is being read
   // const componemtDidMount = () => {
-  //   fetch("http://localhost:3000/")
+  //   fetch("https://face-detection-app.onrender.com/")
   //     .then((response) => response.json())
   //     .then(console.log);
   // };
@@ -92,7 +92,7 @@ const App = () => {
 
   const onButtonSubmit = () => {
     setImageUrl(input);
-    fetch("http://localhost:3000/imageurl", {
+    fetch("https://face-detection-app.onrender.com/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ input: input }),
@@ -102,7 +102,7 @@ const App = () => {
         if (response) {
           if (response.outputs[0].data.regions.length != 0) {
             const faces = response.outputs[0].data.regions.length;
-            fetch("http://localhost:3000/image", {
+            fetch("https://face-detection-app.onrender.com/image", {
               method: "put",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
