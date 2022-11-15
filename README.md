@@ -1,1 +1,1 @@
-# Face-recognition-app-with-server
+# Face Recognition App front End
